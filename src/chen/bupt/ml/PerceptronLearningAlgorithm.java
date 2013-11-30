@@ -1,4 +1,4 @@
-package ml;
+package chen.bupt.ml;
 
 import chen.bupt.utils.MathUtils;
 

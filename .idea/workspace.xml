@@ -5,7 +5,7 @@
     <ignored path="MachineLearning.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385801629493" ignored="false" />
-    <file path="$PROJECT_DIR$/src/datastructure/Matrix.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385801838342" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385802118123" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +375,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/MathUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/chen/bupt/utils/MathUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />

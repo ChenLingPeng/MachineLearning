@@ -1,6 +1,9 @@
 package chen.bupt.deeplearning;
 
 public class DBN {
+  // for mini-batch learning
+  private int N;
+  private int[] layerSize;
 
   /**
    * @param args

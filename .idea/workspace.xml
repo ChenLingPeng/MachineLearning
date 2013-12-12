@@ -11,6 +11,8 @@
     <file path="/Matrix.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385803658257" ignored="false" />
     <file path="/TypeTransform.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385805780083" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385821167433" ignored="false" />
+    <file path="/RBM.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1386746901048" ignored="false" />
+    <file path="/DBN.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1386747041250" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,19 +76,11 @@
       <file leaf-file-name="BackPropagation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="42" selection-start="4417" selection-end="4417" vertical-scroll-proportion="0.0">
+            <state line="11" column="28" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1278#1294#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PerceptronLearningAlgorithm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/PerceptronLearningAlgorithm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="18" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +88,7 @@
       <file leaf-file-name="DBN.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="5" selection-start="81" selection-end="81" vertical-scroll-proportion="0.30555555">
+            <state line="8" column="16" selection-start="148" selection-end="148" vertical-scroll-proportion="0.4074074">
               <folding />
             </state>
           </provider>
@@ -125,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/chen/bupt/datastructure/Matrix.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/RBM.java" />
-        <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/LinearRegressionLayer.java" />
+        <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java" />
       </list>
     </option>
   </component>
@@ -199,6 +193,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bupt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MachineLearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MachineLearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bupt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,7 +477,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6484594" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35154063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35154063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -556,15 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="42" selection-start="4417" selection-end="4417" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/PerceptronLearningAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="18" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
@@ -574,21 +581,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/deeplearning/RBM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="57" selection-start="394" selection-end="394" vertical-scroll-proportion="0.45833334">
+        <state line="5" column="5" selection-start="92" selection-end="115" vertical-scroll-proportion="0.25462964">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/deeplearning/LinearRegressionLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="924" selection-end="924" vertical-scroll-proportion="1.1203704">
+        <state line="6" column="28" selection-start="134" selection-end="134" vertical-scroll-proportion="0.30555555">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1278#1294#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="81" selection-end="81" vertical-scroll-proportion="0.30555555">
+        <state line="8" column="16" selection-start="148" selection-end="148" vertical-scroll-proportion="0.4074074">
           <folding />
         </state>
       </provider>

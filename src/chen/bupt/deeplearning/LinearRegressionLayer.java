@@ -4,7 +4,7 @@ package chen.bupt.deeplearning;
 import chen.bupt.utils.MathUtils;
 
 public class LinearRegressionLayer {
-  // 样本数
+  // for mini-batch learning
   public int N;
 
   // hidden_size * visual_size

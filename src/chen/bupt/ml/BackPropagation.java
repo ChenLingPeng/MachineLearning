@@ -12,7 +12,6 @@ public class BackPropagation {
   private int layer; //隐藏层+1
   private int[] layersSize; // 各层神经元数目, size=layer+1
   private List<Matrix> layers;
-//  private double[] bias;
 
   public BackPropagation(int layer, int[] layersSize) {
     this.layer = layer;
@@ -23,10 +22,6 @@ public class BackPropagation {
       Matrix matrix = new Matrix(layersSize[i + 1], layersSize[i] + 1); // add 1 for bias
       layers.add(matrix);
     }
-//    bias = new double[layer];
-//    for (int i = 0; i < layer; i++) {
-//      bias[i] = MathUtils.gaussian();
-//    }
   }
 
 
@@ -56,7 +51,6 @@ public class BackPropagation {
           sum += a_pre[k] * layers.get(i).weights[j][k];
         }
         sum += layers.get(i).weights[j][layersSize[i]];
-//        sum += bias[i];
         tmp[j] = MathUtils.sigmod(sum);
       }
       a_pre = tmp;
@@ -77,14 +71,12 @@ public class BackPropagation {
         layers.get(layer - 1).weights[i][j] += learningRate * X.get(layer - 1).get(j) * delta_post[i];
       }
       layers.get(layer - 1).weights[i][layersSize[layer - 1]] += learningRate * delta_post[i];
-//      bias[layer - 1] += learningRate * delta_post[i];
     }
     // for hidden layer
     for (int i = layer - 1; i > 0; i--) {
       double[] delta_now = new double[layersSize[i]];
       for (int j = 0; j < layersSize[i]; j++) {
         for (int k = 0; k < layersSize[i + 1]; k++) {
-//          System.out.println(i+","+j+","+k);
           delta_now[j] = delta_post[k];
           delta_now[j] += layers.get(i).weights[k][j] * delta_post[k];
         }
@@ -95,7 +87,6 @@ public class BackPropagation {
           layers.get(i - 1).weights[j][k] += learningRate * X.get(i - 1).get(k) * delta_now[j];
         }
         layers.get(i - 1).weights[j][layersSize[i - 1]] += learningRate * delta_now[j];
-//        bias[i - 1] += learningRate * delta_now[j];
       }
       delta_post = delta_now;
     }
@@ -116,10 +107,7 @@ public class BackPropagation {
         for (int k = 0; k < layers.get(i).column - 1; k++) {
           sum += a_pre[k] * layers.get(i).weights[j][k];
         }
-        assert layers.get(i).column - 1 == layersSize[i] : "coding wrong";
         sum += layers.get(i).weights[j][layers.get(i).column - 1];
-//        sum += bias[i];
-//        sum += 1;
         tmp[j] = MathUtils.sigmod(sum);
       }
       a_pre = tmp;

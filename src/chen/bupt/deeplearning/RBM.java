@@ -14,7 +14,13 @@ public class RBM {
   public int hidden_size;
   // 输入层单元个数
   public int visual_size;
+  public double error;
   // 其他参数还可以设置labmda进行l2的惩罚项
+  // 加入l1惩罚可以进行sparse
+
+  public RBM(int n, int n_hidden, int n_visual) {
+    this(n, n_hidden, n_visual, null, null, null);
+  }
 
   public RBM(int n, int n_hidden, int n_visual, double[][] w,
              double[] h_bias, double[] v_bias) {
@@ -63,7 +69,6 @@ public class RBM {
    *
    * @param input        输入样本
    * @param learningRate 学习率
-   * @param k            CD-k
    */
   public double contrastiveDivergence(int[] input, double learningRate) {
     assert input != null && input.length == visual_size : "invalid train data";
@@ -95,17 +100,22 @@ public class RBM {
   }
 
   public void train(int[][] inputs, int iter, double learningRate) {
+    double error = 0.0;
     for (int i = 0; i < iter; i++) {
-      double error = 0.0;
+      error = 0.0;
       for (int j = 0; j < inputs.length; j++) {
         error += this.contrastiveDivergence(inputs[j], learningRate);
       }
       System.out.println("round " + i + " with error " + error);
     }
+    this.error = error;
   }
 
-  public void predict(int[] input) {
-
+  public void active_hidden(int[] input, int[] output) {
+    for (int i = 0; i < this.hidden_size; i++) {
+      double prob = propup(input, i, bias_hidden[i]);
+      output[i] = MathUtils.binomial(1, prob);
+    }
   }
 
   private void sample_h_given_v(int[] v_sample, double[] h_prop,

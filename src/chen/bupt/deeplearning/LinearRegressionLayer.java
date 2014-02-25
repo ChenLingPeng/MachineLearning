@@ -15,10 +15,11 @@ public class LinearRegressionLayer {
 
   public int label_size;
 
-  public LinearRegressionLayer(double[][] w, double[] bias, int n_feature,
-                               int n_label) {
+
+  public LinearRegressionLayer(int n_feature, int n_label, int n, double[][] w, double[] bias) {
     feature_size = n_feature;
     label_size = n_label;
+    N = n;
     if (w != null) {
       W = w;
     } else {
@@ -33,6 +34,10 @@ public class LinearRegressionLayer {
         this.bias[i] = 0.0;
       }
     }
+  }
+
+  public LinearRegressionLayer(int feature_size, int label_size, int n) {
+    this(feature_size, label_size, n, null, null);
   }
 
   private void initWeight() {
@@ -88,7 +93,7 @@ public class LinearRegressionLayer {
 
     int[][] train_Y = {{1, 0}, {1, 0}, {1, 0}, {0, 1}, {0, 1},
         {0, 1}};
-    LinearRegressionLayer lr = new LinearRegressionLayer(null, null, 6, 2);
+    LinearRegressionLayer lr = new LinearRegressionLayer(6, 2, 1, null, null);
     for (int i = 0; i < 1000; i++) {
       double error = 0.0;
       for (int j = 0; j < train_X.length; j++) {

@@ -7,7 +7,7 @@
     <file path="/Dummy.txt" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1393312141136" ignored="false" />
     <file path="D:/workspace/java/bow/trunk/.idea/workspace.xml" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385802349273" ignored="false" />
     <file path="/PerceptronLearningAlgorithm.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385802430972" ignored="false" />
-    <file path="/BackPropagation.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385821150815" ignored="false" />
+    <file path="/BackPropagation.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1393331600535" ignored="false" />
     <file path="/Matrix.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385803658257" ignored="false" />
     <file path="/TypeTransform.java" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385805780083" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="84127fd2-2046-4c59-b749-8eecab302583" time="1385821167433" ignored="false" />
@@ -78,8 +78,10 @@
       <file leaf-file-name="BackPropagation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="29" selection-start="769" selection-end="769" vertical-scroll-proportion="0.62445414">
-              <folding />
+            <state line="158" column="5" selection-start="5672" selection-end="5672" vertical-scroll-proportion="0.7117904">
+              <folding>
+                <element signature="e#1355#1371#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,7 +109,7 @@
       <file leaf-file-name="MathUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chen/bupt/utils/MathUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="46" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+            <state line="21" column="23" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,10 +138,10 @@
         <option value="$PROJECT_DIR$/src/chen/bupt/ml/PerceptronLearningAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/utils/TypeTransform.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/datastructure/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/LinearRegressionLayer.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/RBM.java" />
         <option value="$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java" />
+        <option value="$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java" />
       </list>
     </option>
   </component>
@@ -499,7 +501,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -519,7 +521,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15994236" sideWeight="0.68487394" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15994236" sideWeight="0.68487394" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31512606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -603,7 +605,9 @@
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#1355#1371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,7 +637,9 @@
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#1355#1371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -654,11 +660,6 @@
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/utils/TypeTransform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="44" selection-start="339" selection-end="339" vertical-scroll-proportion="0.4198783" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chen/bupt/datastructure/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/PerceptronLearningAlgorithm.java">
@@ -682,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chen/bupt/utils/MathUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="46" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/deeplearning/DBN.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="7" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.0">
@@ -698,10 +692,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/chen/bupt/datastructure/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="419" selection-end="419" vertical-scroll-proportion="0.37991267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chen/bupt/utils/MathUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="23" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chen/bupt/ml/BackPropagation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="769" selection-end="769" vertical-scroll-proportion="0.62445414">
-          <folding />
+        <state line="158" column="5" selection-start="5672" selection-end="5672" vertical-scroll-proportion="0.7117904">
+          <folding>
+            <element signature="e#1355#1371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

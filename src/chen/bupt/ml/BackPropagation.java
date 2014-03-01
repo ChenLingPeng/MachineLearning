@@ -68,7 +68,7 @@ public class BackPropagation {
     }
     for (int i = 0; i < layersSize[layer]; i++) {
       for (int j = 0; j < layersSize[layer - 1]; j++) {
-        layers.get(layer - 1).weights[i][j] += learningRate * X.get(layer - 1).get(j) * delta_post[i];
+        layers.get(layer - 1).weights[i][j] += learningRate * X.get(layer - 1).get(j) * delta_post[i] + lambda * layers.get(layer - 1).weights[i][j];
       }
       layers.get(layer - 1).weights[i][layersSize[layer - 1]] += learningRate * delta_post[i];
     }
@@ -84,7 +84,7 @@ public class BackPropagation {
       }
       for (int j = 0; j < layersSize[i]; j++) {
         for (int k = 0; k < layersSize[i - 1]; k++) {
-          layers.get(i - 1).weights[j][k] += learningRate * X.get(i - 1).get(k) * delta_now[j];
+          layers.get(i - 1).weights[j][k] += learningRate * X.get(i - 1).get(k) * delta_now[j] + lambda * layers.get(i - 1).weights[j][k];
         }
         layers.get(i - 1).weights[j][layersSize[i - 1]] += learningRate * delta_now[j];
       }
@@ -136,11 +136,10 @@ public class BackPropagation {
     int maxIter = 1000;
     int[] layerSize = {2, 6, 2};
     BackPropagation bp = new BackPropagation(layerSize.length - 1, layerSize);
-    // 迭代次数貌似跟weights的初始化关系比较大。。。
     for (int i = 0; i < maxIter; i++) {
       double error = 0;
       for (int j = 0; j < inputs.length; j++) {
-        error += bp.train(inputs[j], outputs[j], 0.9, 0.001, j);
+        error += bp.train(inputs[j], outputs[j], 0.9, 0.0001, j);
       }
       System.out.println(i + ", " + error);
       if (error < threshlod) break;

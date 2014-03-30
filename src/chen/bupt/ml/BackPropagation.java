@@ -56,41 +56,44 @@ public class BackPropagation {
       a_pre = tmp;
       X.add(TypeTransform.array2vec(a_pre));
     }
-//    System.out.println(numT+" origin: "+output[0]+","+output[1]);
-//    System.out.println(numT+" output: "+a_pre[0]+","+a_pre[1]);
-    assert X.size() == layer + 1 : "X not right";
+//    assert X.size() == layer + 1 : "X not right";
 
-    //back-propagation
-    // for last layer
+    // back-propagation
+    // delta for output layer
+    List<Vector<Double>> deltaX = new ArrayList<Vector<Double>>();
     double[] delta_post = new double[layersSize[layer]];
     for (int i = 0; i < layersSize[layer]; i++) {
       delta_post[i] = a_pre[i] * (1 - a_pre[i]) * (output[i] - a_pre[i]); //省略负号，更新时用+
     }
-    for (int i = 0; i < layersSize[layer]; i++) {
-      for (int j = 0; j < layersSize[layer - 1]; j++) {
-        layers.get(layer - 1).weights[i][j] += learningRate * X.get(layer - 1).get(j) * delta_post[i] + lambda * layers.get(layer - 1).weights[i][j];
-      }
-      layers.get(layer - 1).weights[i][layersSize[layer - 1]] += learningRate * delta_post[i];
-    }
-    // for hidden layer
+    deltaX.add(TypeTransform.array2vec(delta_post));
+
+    // delta for hidden layer
     for (int i = layer - 1; i > 0; i--) {
       double[] delta_now = new double[layersSize[i]];
       for (int j = 0; j < layersSize[i]; j++) {
         for (int k = 0; k < layersSize[i + 1]; k++) {
-          delta_now[j] = delta_post[k];
-          delta_now[j] += layers.get(i).weights[k][j] * delta_post[k];
+          delta_now[j] += layers.get(i).weights[k][j] * deltaX.get(layer-i-1).get(k);
         }
         delta_now[j] *= X.get(i).get(j) * (1 - X.get(i).get(j));
       }
-      for (int j = 0; j < layersSize[i]; j++) {
-        for (int k = 0; k < layersSize[i - 1]; k++) {
-          layers.get(i - 1).weights[j][k] += learningRate * X.get(i - 1).get(k) * delta_now[j] + lambda * layers.get(i - 1).weights[j][k];
-        }
-        layers.get(i - 1).weights[j][layersSize[i - 1]] += learningRate * delta_now[j];
-      }
-      delta_post = delta_now;
+      deltaX.add(TypeTransform.array2vec(delta_now));
     }
-    return (a_pre[0] - output[0]) * (a_pre[0] - output[0]) + (a_pre[1] - output[1]) * (a_pre[1] - output[1]);
+
+    // update weights
+    for (int i = layer; i > 0; i--) {
+      for(int j=0;j<layersSize[i];j++){
+        for(int k=0;k<layersSize[i-1];k++){
+          layers.get(i-1).weights[j][k]+=learningRate*deltaX.get(layer-i).get(j)*X.get(i-1).get(k)-lambda*layers.get(i-1).weights[j][k];
+        }
+        layers.get(i-1).weights[j][layersSize[i-1]]+=learningRate*deltaX.get(layer-i).get(j);
+      }
+    }
+
+    double error = 0.0;
+    for(int i=0;i<layersSize[layer];i++){
+      error+=(X.get(layer).get(i)-output[i])*(X.get(layer).get(i)-output[i]);
+    }
+    return error;
   }
 
   public void predict(double[] input, double[] exp) {
